@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Violation Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+        h2 {
+            margin-top: 30px;
+            color: #333;
+        }
+        .map {
+            margin: 20px 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Parking Violation Prediction Result</h1>
+        <p>Execution Time: {{ execution_time }} seconds</p>
+        <p>Violations found by algorithm: {{ algorithm_violations }}</p>
+        <p>Actual Violations within 500m: {{ total_violations }}</p>
+        <p>Total Fines: ${{ "%.2f"|format(total_fines) }}</p>
+        <p>Probability of Getting a Ticket: {{ "%.2f"|format(probability * 100) }}%</p>
+        <h2>Map of Nearby Violations</h2>
+        <div class="map">
+            {{ map|safe }}
+        </div>
+        <a href="/">Back to Search</a>
+    </div>
+</body>
+</html>
