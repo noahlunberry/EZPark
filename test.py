@@ -13,8 +13,8 @@ def find_violations_within_radius(lat, lon, radius=500):
     return within_radius
 
 # Example usage
-selected_lat = 38.89
-selected_lon = -77.004
+selected_lat = 38.910
+selected_lon = -77.002
 violations_within_500m = find_violations_within_radius(selected_lat, selected_lon)
 
 # Create a map centered at the selected location

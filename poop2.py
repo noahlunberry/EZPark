@@ -64,7 +64,7 @@ if __name__ == "__main__":
     G = load_graph(pickle_file)
 
     # Example coordinates
-    lat, lon = 38.890, -77.005
+    lat, lon = 38.910, -77.002
 
     # Find the nearest node
     start_node = find_nearest_node(G, lat, lon)

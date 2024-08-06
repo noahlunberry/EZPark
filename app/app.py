@@ -10,14 +10,14 @@ import time
 
 app = Flask(__name__)
 
-# Load the graph
+# load the graph
 def load_graph(pickle_file):
     with open(pickle_file, 'rb') as f:
         return pickle.load(f)
 
 G = load_graph('parking_violations_graph.pickle')
 
-# Load the original data
+# load the original data
 data = pd.read_csv('cleaned_parking_violations.csv')
 
 def find_nearest_node(lat, lon):
